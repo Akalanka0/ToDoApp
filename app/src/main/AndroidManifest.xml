@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.todo"
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Permission to send SMS -->
     <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    
+    <!-- Declare telephony feature as optional for ChromeOS compatibility -->
+    <uses-feature android:name="android.hardware.telephony" required="false"/>
 
     <application
         android:allowBackup="true"
@@ -16,17 +19,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDo">
 
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ToDo">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Optional: SplashActivity if you want -->
+        <!--
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ToDo"/>
+        -->
 
     </application>
 
