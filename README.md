@@ -60,7 +60,7 @@ This project was developed with significant assistance from AI tools:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/USER/ToDoApp.git
+   git clone https://github.com/Akalanka0/ToDoApp.git
    ```
 2. Open the project in **Android Studio**.
 3. Let **Gradle** sync.
